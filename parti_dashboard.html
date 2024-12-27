@@ -1,0 +1,47 @@
+<html>
+<head>
+  <title>Participant Dashboard - International Conference 2024</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin_dashboard.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Admin Dashboard</h2>
+    <a href="#" onclick="showSection('schedule')"><i class="fas fa-calendar-alt"></i> Schedule</a>
+    <a href="#" onclick="showSection('tracks')"><i class="fas fa-list"></i> Tracks</a>
+    <a href="home.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+  </div>
+
+  <div class="main-content">
+    <div class="header">
+      <h1>Welcome to ITUM IRC - 2024</h1>
+    </div>
+
+    <div id="schedule" class="crud-section" style="display: none;">
+      <h2>Schedule</h2>
+      vbfbifvbgbh
+    </div>
+
+    <div id="tracks" class="crud-section" style="display: none;">
+      <h2>Tracks</h2>
+      <button onclick="createItem('tracks')">Add Track</button>
+      <table id="tracks-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Track Title</th>
+            <th>Description</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Tracks rows will go here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="admin_dashboard.js"></script>
+</body>
+</html>

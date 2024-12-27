@@ -1,0 +1,208 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    color: #ffffff;
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  /* Sidebar Styles */
+  .sidebar {
+    width: 250px;
+    background: #1e272e;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #4ca1af;
+    letter-spacing: 1px;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 15px 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar a i {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  .sidebar a:hover {
+    background: #4ca1af;
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Main Content Styles */
+  .main-content {
+    flex: 1;
+    padding: 40px;
+    background: linear-gradient(to right, #4ca1af, #2c3e50);
+    border-radius: 20px 0 0 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    background: #1e272e;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    color: #ffffff;
+  }
+  
+  .header h1 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  /* CRUD Section Styles */
+  .crud-section {
+    display: none;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  .crud-section h2 {
+    font-size: 24px;
+    color: #4ca1af;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  button {
+    padding: 12px 25px;
+    background: #4ca1af;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background: #2c3e50;
+    transform: scale(1.05);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+  }
+  
+  table th {
+    background: #4ca1af;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  table td {
+    background: #f9f9f9;
+  }
+  
+  table td.actions {
+    text-align: center;
+  }
+  
+  table tr:hover {
+    background: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  /* Button and Table Actions */
+  button.edit {
+    background: #f39c12;
+  }
+  
+  button.edit:hover {
+    background: #e67e22;
+  }
+  
+  button.delete {
+    background: #e74c3c;
+  }
+  
+  button.delete:hover {
+    background: #c0392b;
+  }
+  
+  button.add {
+    background: #2ecc71;
+  }
+  
+  button.add:hover {
+    background: #27ae60;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .sidebar {
+      position: fixed;
+      width: 200px;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .sidebar.active {
+      transform: translateX(0);
+    }
+  
+    .main-content {
+      margin-left: 0;
+      padding: 20px;
+    }
+  
+    .header h1 {
+      font-size: 24px;
+    }
+  
+    .crud-section h2 {
+      font-size: 20px;
+    }
+  
+    table th, table td {
+      font-size: 14px;
+    }
+  }
+  
